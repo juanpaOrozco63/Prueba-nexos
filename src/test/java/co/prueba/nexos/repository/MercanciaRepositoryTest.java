@@ -90,7 +90,7 @@ class MercanciaRepositoryTest {
 	@Order(4)
 	void delete() {
 		log.info("delete");
-		Optional<Mercancia> mercanciaOptional = mercanciaRepository.findById(mercanciaId);
+		Optional<Mercancia> mercanciaOptional = mercanciaRepository.findById(5);
 		assertTrue(mercanciaOptional.isPresent(), excepcion+" no existe");
 		Mercancia mercancia = mercanciaOptional.get();
 		mercanciaRepository.delete(mercancia);

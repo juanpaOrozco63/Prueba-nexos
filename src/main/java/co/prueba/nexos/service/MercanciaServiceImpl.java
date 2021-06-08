@@ -38,7 +38,6 @@ public class MercanciaServiceImpl implements MercanciaService {
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public Mercancia save(Mercancia entity) throws Exception {
-		validate(entity);
 		List<Mercancia> mercancias = findByName(entity.getNombre()); 
 		if(!mercancias.isEmpty()) {
 			throw new Exception("Ya existe una mercancia con el nombre"+ entity.getNombre());

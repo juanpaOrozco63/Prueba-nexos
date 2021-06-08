@@ -48,7 +48,7 @@ class MercanciaServiceTest {
 		Optional<Producto> producto = productoService.findById(proId);
 		Optional<Usuario> usuario = usuarioService.findById(usuarioId);
 		Date fecha = new Date();
-		mercancia.setNombre("Cargas");
+		mercancia.setNombre("Cargas 2");
 		mercancia.setProducto(producto.get());
 		mercancia.setCantidad(2);
 		mercancia.setFechaIngreso(fecha);

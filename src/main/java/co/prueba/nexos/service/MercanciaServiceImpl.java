@@ -40,7 +40,7 @@ public class MercanciaServiceImpl implements MercanciaService {
 	public Mercancia save(Mercancia entity) throws Exception {
 		List<Mercancia> mercancias = findByName(entity.getNombre()); 
 		if(!mercancias.isEmpty()) {
-			throw new Exception("Ya existe una mercancia con el nombre"+ entity.getNombre());
+			throw new Exception("Ya existe una mercancia con el nombre "+ entity.getNombre());
 		}
 
 		return mercanciaRepository.save(entity);
@@ -50,7 +50,6 @@ public class MercanciaServiceImpl implements MercanciaService {
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public Mercancia update(Mercancia entity) throws Exception {
-		validate(entity);
 		if (!mercanciaRepository.existsById(entity.getMercanciaId())) {
 			throw new Exception(excepcion + entity.getMercanciaId() + " no existe");
 		}

@@ -57,7 +57,7 @@ public class Mercancia implements Serializable {
 	private Usuario usuario;
 
 	// bi-directional many-to-one association to UsuarioModifica
-	@OneToMany(mappedBy = "mercancia",cascade = CascadeType.ALL,orphanRemoval = true)
+	@OneToMany(mappedBy = "mercancia",cascade = CascadeType.ALL)
 	private List<UsuarioModifica> usuarioModificas;
 
 	public Mercancia() {

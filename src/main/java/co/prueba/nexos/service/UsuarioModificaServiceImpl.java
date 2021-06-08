@@ -34,7 +34,6 @@ public class UsuarioModificaServiceImpl implements UsuarioModificaService{
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public UsuarioModifica save(UsuarioModifica entity) throws Exception {
-		validate(entity);
 		
 		return usuarioModificaRepository.save(entity);
 	}

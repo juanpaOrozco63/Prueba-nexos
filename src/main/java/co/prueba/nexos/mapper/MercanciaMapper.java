@@ -18,4 +18,5 @@ public interface MercanciaMapper {
 	@Mapping(target = "usuario.usuarioId", source = "usuarioId")
 	public Mercancia toMercancia(MercanciaDTO mercanciaDTO);
 	public List<Mercancia> toMercancias (List<MercanciaDTO> mercanciasDTO);
+	
 }
